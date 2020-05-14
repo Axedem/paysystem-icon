@@ -1,0 +1,5 @@
+#Ignore files
+TODO
+*.sublime-project
+*.sublime-workspace
+json.php
