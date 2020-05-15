@@ -58,7 +58,10 @@ var Icon = /*#__PURE__*/function (_React$Component) {
       var _this$props = this.props,
           source = _this$props.source,
           iconName = _this$props.iconName,
-          fill = _this$props.fill;
+          fill = _this$props.fill,
+          w = _this$props.w,
+          h = _this$props.h,
+          className = _this$props.className;
       var iconType = fill ? "mono" : "color";
 
       if (fill || source) {
@@ -66,19 +69,19 @@ var Icon = /*#__PURE__*/function (_React$Component) {
           src: "../svg/" + iconType + "/" + iconName + ".svg",
           uniquifyIDs: true,
           style: {
-            width: this.props.w,
-            height: this.props.h,
-            fill: "#f00"
+            width: w,
+            height: h,
+            fill: fill
           },
           preProcessor: this.preProcessor
         }, this.props));
       } else {
         return /*#__PURE__*/_react["default"].createElement("img", _extends({
           style: {
-            width: this.props.w,
-            height: this.props.h
+            width: w,
+            height: h
           },
-          className: this.props.className,
+          className: className,
           src: "../svg/color/" + iconName + ".svg"
         }, this.props));
       }
